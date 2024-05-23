@@ -8,12 +8,9 @@ use App\Services\PetService;
 
 class PetController extends Controller
 {
-    protected $petService;
-
-    public function __construct(PetService $petService)
-    {
-        $this->petService = $petService;
-    }
+    public function __construct(
+      private PetService $petService
+    ){}
 
     public function index(Request $request)
     {
