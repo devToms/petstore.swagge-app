@@ -39,7 +39,7 @@ class PetService
         }
 
         return $response->json();
-        }
+    }
 
 
     public function updatePet($data)
