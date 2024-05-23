@@ -77,6 +77,7 @@ class PetController extends Controller
             $data = $request->all();
             $data = $request->only(['name', 'status']);
             $data = array_merge(['id' => $id], $data);
+            
             $this->petService->updatePet($data);
 
             return redirect()->route('pets.index')->with('success', 'Pet updated successfully.');
