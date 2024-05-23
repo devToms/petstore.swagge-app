@@ -44,11 +44,9 @@ class PetService
 
     public function updatePet($data)
     {
-      //  $response = Http::put("{$this->baseUri}/pet", $data);
-
         $response = Http::withHeaders([
-      'Content-Type' => 'application/json',
-  ])->put("{$this->baseUri}/pet", $data);
+          'Content-Type' => 'application/json',
+        ])->put("{$this->baseUri}/pet", $data);
 
         if ($response->failed()) {
             throw new \Exception('Error updating pet');
